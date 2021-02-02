@@ -142,6 +142,10 @@ header {
   justify-content: center;
 }
 
+.hamburger img {
+  width: 30px;
+}
+
 header h1 {
   color: #aaaaaa;
   transition: all 0.3s ease-in-out;
@@ -332,7 +336,7 @@ header h1 {
 
 .project-details {
   flex-basis: 40%;
-  padding: 40px 0;
+  padding: 40px 40px;
 }
 
 /* CONTACT FORM */
@@ -586,6 +590,24 @@ a.anchor-link h3:after {
   }
 }
 
+.js-box {
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  border: solid 2px #1a1a1a;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.code-embed {
+  width: 100%;
+  height: auto;
+  /* background-color: #fff;
+  border: solid 2px #1a1a1a; */
+  /* padding: 20px; */
+  margin-bottom: 120px;
+}
+
 /* COPY EMAIL TO CLIPBOARD */
 .email-link {
   position: relative;
@@ -697,7 +719,7 @@ a.anchor-link h3:after {
   }
 
   footer .social {
-    justify-content: end;
+    justify-content: start;
   }
 
   .footer-info {
