@@ -2,47 +2,46 @@
 
 // Disable default link function
 $('a[href^=mailto]').on('click', function() {
-    return false
-  })
-  
+  return false
+})
+
 // Copy to clipboard function found on Stack Overflow
 function copyToClipboard(text) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val(text).select();
-  document.execCommand("copy");
-  $temp.remove();
+var $temp = $("<input>");
+$("body").append($temp);
+$temp.val(text).select();
+document.execCommand("copy");
+$temp.remove();
 }
 
-  
+
 // Function to show alert box on hover
 // Followed an example on CodePen from Eric Clark
 $(document).ready(function() {
 
-  $('a[href^=mailto]').addClass('email-link');
+$('a[href^=mailto]').addClass('email-link');
 
-  var messageCopied = 'Email copied';
+var messageCopied = 'Email copied';
 
-  // Add a div inside the link to hold the alert text. Keep it empty to be able to 
-  // switch messages without any text staying before the message.
-  $('.email-link').append('<div class="email-alert"></div>');
-  
-  // Add the text to the alert div
-  $('.email-alert').append(messageCopied);
+// Add a div inside the link to hold the alert text. Keep it empty to be able to 
+// switch messages without any text staying before the message.
+$('.email-link').append('<div class="email-alert"></div>');
 
-  // Function to get the email from the href of the link and copy to clipboard
-  $('.email-link').on('click', function() {
+// Add the text to the alert div
+$('.email-alert').append(messageCopied);
 
-      var href = $(this).attr('href');
-      var email = href.replace('mailto:', '');
+// Function to get the email from the href of the link and copy to clipboard
+$('.email-link').on('click', function() {
 
-      copyToClipboard(email);
+    var href = $(this).attr('href');
+    var email = href.replace('mailto:', '');
 
-      $(this).find('.email-alert').fadeIn(200);
-      setTimeout(function() {
-          $('.email-alert').fadeOut(200);}, 1200);         
+    copyToClipboard(email);
 
-  })
+    $(this).find('.email-alert').fadeIn(200);
+    setTimeout(function() {
+        $('.email-alert').fadeOut(200);}, 1200);         
 
 })
-  
+
+})

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html id="top" lang="en">
  <head>
+    <meta charset="UTF-8">
+
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="css/base.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
 
     <title>Next Life Prediction - JavaScript exercise</title>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
 
     <meta name="description" content="Mixed messages generator.">
 
@@ -22,7 +25,6 @@
     <meta name="twitter:description" content="JavaScript exercise for a randomized message generator.">
     <meta name="twitter:image" content="http://atanas-dim.github.io/assets/social-card.png">
 
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -38,14 +40,14 @@
 
                 <div class="logo-container">
                     <a href="index.html" aria-label="Website title: Atanas Dimitrov."><h1 class="logo">ATANAS DIMITROV</h1></a>
-                    <a class="hamburger"><img src="assets/hamburger-icon.svg"></a>
+                    <a class="hamburger"><img src="assets/hamburger-icon.svg" alt="Hamburger menu"></a>
                 </div>
 
                 <nav>
-                    <ul>
-                        <li><a href="index.html#projects" aria-label="Link to Portfolio."><h1 class="selected">Portfolio</h1></a></li>
+                    <ul role="presentation">
+                        <li><a href="index.html#projects" aria-label="Link to Portfolio." class="selected">Portfolio</a></li>
 
-                        <li><a href="contact.html" aria-label="Link to Contact form page."><h1>Contact</h1></a></li>
+                        <li><a href="index.html#contact-form" aria-label="Link to Contact form page.">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -58,8 +60,8 @@
 
         <div class="container">
 
-            <div class="project-cover">
-                <img src="assets/project-thumb-mixed-messages.png" alt="Project cover image.">
+            <div class="project-cover" role="img" aria-label="Project cover.">
+                <img src="assets/project-thumb-mixed-messages.png" alt="">
             </div>
 
         </div>
@@ -75,13 +77,13 @@
 
                 <div class="projects-text">
                     <h2>Next Life Predictions</h2>
-                    <h4>Role</h4>
+                    <h3>Role</h3>
                     <p>Codecademy portfolio project, 2021</p>
                     <p>JavaScript</p>
                 </div>
 
                 <div class="projects-text">        
-                    <h4>Brief</h4>
+                    <h3>Brief</h3>
                     <p>This is a JavaScript project I did while taking the Codecademy Full-stack Engineer Career Path course.
                         The task was to code a simple program that would return a combination of mixed messages every time
                         a user runs it. I have chosen the theme of future life to create a predictions generator.
@@ -95,14 +97,14 @@
 
                 <div class="projects-text">
                     <h2>Logic of the code</h2>
-                    <h4>Steps</h4>
+                    <h3>Steps</h3>
                     <p>There were a few options to complete the task, each of which would structure the
                         JavaScript program in a different way. I chose to use objects, arrays, getters and a simple method,
                         which would generate the final message for the user. By doing this the program would run the same way 
                         both in command line and on button click when used with HTML. The steps I took are as follows:
                     </p>
 
-                    <ul>
+                    <ul role="presentation">
                         <li>Use a function to generate a random number. It should take the length of an array as argument and use it as a maximum value later in the program.</li>
                         <li>Create an object to store 3 types of messages.</li>
                         <li>Create getter for each type of messages to return a random message.</li>
@@ -118,9 +120,9 @@
                     <h2>Try the code</h2>
                 </div>
 
-                <figure class="gallery-container single-column code-embed">
+                <figure class="code-embed" role="figure" aria-label="CodePen embedded window.">
                     
-                    <p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="js,result" data-user="atanasdim" data-slug-hash="XWNJQKJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Next Life Predictions - Mixed Messages">
+                    <p class="codepen" data-height="600" data-theme-id="dark" data-default-tab="js,result" data-user="atanasdim" data-slug-hash="XWNJQKJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Next Life Predictions - Mixed Messages">
                         <span>See the Pen <a href="https://codepen.io/atanasdim/pen/XWNJQKJ">
                         Next Life Predictions - Mixed Messages</a> by Atanas Dimitrov (<a href="https://codepen.io/atanasdim">@atanasdim</a>)
                         on <a href="https://codepen.io">CodePen</a>.</span>
@@ -134,7 +136,7 @@
         </article>
 
             
-        <div class="anchor-link-wrap">
+        <div class="anchor-link-container">
             <a href="index.html#projects" class="anchor-link"><img src="/assets/chevron-left-small.svg"><h3>&nbsp;Back to all projects</h3></a>
         </div>
         
@@ -147,19 +149,19 @@
             <h4>Let's connect!</h4>
 
             <div class="social">       
-                <a href="mailto:hi.atanasdim@gmail.com" aria-label="Link to Atanas's email." target="_blank">
+                <a href="mailto:hi.atanasdim@gmail.com" aria-label="Atanas's email - Click to copy." target="_blank">
                     <div class="icon-container">
                         <img src="assets/mail.svg" alt="" class="icon">
                     </div>    
                 </a>
 
-                <a href="https://www.linkedin.com/in/atanas-dim/" aria-label="Link to Atanas's LinkedIn profile." target="_blank">
+                <a href="https://www.linkedin.com/in/atanas-dim/" aria-label="Atanas's LinkedIn profile." target="_blank">
                     <div class="icon-container">
                         <img src="assets/linkedin.svg" alt="" class="icon">
                     </div>    
                 </a>
 
-                <a href="https://github.com/atanas-dim" aria-label="Link to Atanas's GitHub profile." target="_blank">
+                <a href="https://github.com/atanas-dim" aria-label="Atanas's GitHub profile." target="_blank">
                     <div class="icon-container">
                         <img src="assets/github.svg" alt="" class="icon">
                     </div>    
@@ -167,13 +169,14 @@
             </div>
 
 
-            <hr aria-label="">
+            <hr>
 
 
             <div class="footer-info">
 
                 <div class="project-list">
                     Projects
+                    <div><a href="https://atanas-dim.github.io/alba-responsive-flexbox" target="blank">/ Alba Bau +</a></div>
                     <div><a href="mixed-messages.html">/ Next Life Predictions</a></div>
                     <div><a href="airline.html">/ Airline App</a></div>
                     <div><a href="mish-mash.html">/ Mish Mash Groceries</a></div>

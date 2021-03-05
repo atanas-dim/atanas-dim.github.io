@@ -51,8 +51,7 @@ document.addEventListener("scroll", function() {
 
     if (currentScroll > prevScroll && currentScroll > 60) {
         hideHeader()
-    }
-    else if (currentScroll < prevScroll - 10) {
+    } else if (currentScroll < prevScroll - 10 || currentScroll < 60) {
         showHeader()
     }
 
