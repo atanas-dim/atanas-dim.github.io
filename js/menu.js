@@ -33,8 +33,7 @@ toggleMenuTag.addEventListener("click", function() {
 })
 
 
-// SHOW/HIDE MENU ON SCROLL
-
+// SHOW/HIDE AND MINIMIZE MENU ON SCROLL
 const showHeader = function () {
     headerTag.classList.remove("hidden")
 }
@@ -55,8 +54,20 @@ document.addEventListener("scroll", function() {
         showHeader()
     }
 
-    prevScroll = currentScroll
+    if  (Math.abs(currentScroll - prevScroll) > 10) {
+        headerTag.classList.remove("header-open");
+    }
+
+    prevScroll = currentScroll;
 
 })
 
+// CLOSE MENU ON LINK CLICK
 
+const menuLink = document.querySelectorAll(".menu-link");
+
+menuLink.forEach(function (link) {
+    link.addEventListener("click", function() {
+        headerTag.classList.remove("header-open");
+    });    
+})

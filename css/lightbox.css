@@ -1,0 +1,75 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+}
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: #1a1a1af6;
+}
+
+.modal-close {
+    width: 40px;
+    height: 40px;
+    background-color: #1a1a1a;
+    border-radius: 100px;
+    border: solid 2px #aaaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaaaaa;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+.modal-image {
+    cursor: pointer;
+}
+
+/* .modal-alert {
+    position: absolute;
+    z-index: 1001;
+    background-color: #1a1a1a;
+    border-radius: 100px;
+    border: solid 2px #aaaaaa;
+    color: #aaaaaa;
+    padding: 10px 20px 11px 20px;
+} */
+
+.fit-window {
+    max-width: 90vw; 
+    max-height: 90vh;
+}
+
+.zoom-full-size {
+    max-width: calc(100vw - 40px); 
+    max-height: calc(100vh - 40px); 
+    overflow: scroll; 
+    text-align: center;
+}
+
+.natural-size {
+    max-width: none; 
+    width: max-content; 
+    max-height: none; 
+    height: auto;
+}
