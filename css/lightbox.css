@@ -10,7 +10,7 @@
     left: 0;
     width: 200%;
     height: 200%;
-    background-color: #1a1a1af6;
+    background-color: #1a1a1ad6;
 }
 
 .modal-close {
@@ -23,8 +23,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     color: #aaaaaa;
     cursor: pointer;
     z-index: 1001;
@@ -45,15 +45,10 @@
     cursor: pointer;
 }
 
-/* .modal-alert {
-    position: absolute;
-    z-index: 1001;
-    background-color: #1a1a1a;
-    border-radius: 100px;
-    border: solid 2px #aaaaaa;
-    color: #aaaaaa;
-    padding: 10px 20px 11px 20px;
-} */
+.close-on-zoom {
+    top: 20px;
+    right: 20px;
+}
 
 .fit-window {
     max-width: 90vw; 
@@ -72,4 +67,16 @@
     width: max-content; 
     max-height: none; 
     height: auto;
+}
+
+@media screen and (max-width: 425px) {
+    .zoom-full-size {
+        max-width: calc(100vw - 20px); 
+        max-height: calc(100vh - 20px);
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+    }
 }
