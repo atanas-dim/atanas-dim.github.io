@@ -1,72 +1,101 @@
 const allGalleryItems = document.querySelectorAll(".galleryItem");
 const modal = document.querySelector(".modal");
 const modalClose = document.querySelector(".modal-close");
-const modalContent = document.querySelector(".modal-content");
-const modalImage = document.querySelector(".modal-image");
 const modalBg = document.querySelector(".modal-background");
-const modalAlert = document.querySelector(".modal-alert");
+const modalImage = document.querySelector(".modal-image");
+let imageElement;
+let imageCurrentWidth;
+let imageMaxWidth;
+let timesClicked = 0;
 
-for (const galleryItem of allGalleryItems) {
+// Create img element, add attributes to it and append it to the image container
+function createImage (src, alt) {
+    const image = document.createElement("img");
+    image.setAttribute("src", src);
+    image.setAttribute("alt", alt);
+    imageElement = modalImage.appendChild(image);
+}
 
-    galleryItem.addEventListener("click", function(event) {
-        event.preventDefault();
+// Saves the widths of the image container and the image element, which we use later 
+// to check if the image can be zoomed and also to update the cursor.
+function updateImageWidths () {
+    imageCurrentWidth = modalImage.offsetWidth;
+    imageMaxWidth = imageElement.naturalWidth;
+}
 
-        // Get the HTML of the clicked gallery item and make it the content of the modal image div.
-        // Add cursor style to the image div and make it visible. Also change the overflow of 
-        // the body to avoid scroll behind the lightbox on most browsers.
-        const currentImageHTML = galleryItem.innerHTML;
-        modalImage.innerHTML = currentImageHTML;
-        modalImage.firstElementChild.classList.add("fit-window");
-        modalImage.style.cssText = "cursor: pointer;"
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
+// Fuction which updates the cursor on the lighbox image container depending of the size displayed.
+// If the image is already at its max size/width and can't be zoomed, then cursor is auto.
+// If the image can be zoomed in and then zoomed out, then the cursor is a pointer.
+function updateCursor () {
+    if (imageMaxWidth <= imageCurrentWidth && timesClicked !== 2) {
+        modalImage.style.cssText = "cursor: auto";
+    } else if (imageMaxWidth > imageCurrentWidth || timesClicked === 2) {
+        modalImage.style.cssText = "cursor: pointer";
+    }
+}
 
-        // Use a variable to count the times the image in the lightbox is clicked to zoom in or out.
-        // On mouse over check if the image is already display at it's maximum width. If yes, then 
-        // use the timeClicked variable to avoid the following zoom in/out feature being applied.
-        let timesClicked = 0;
-        modalImage.addEventListener("mouseover", function () {
-            const imageCurrentWidth = modalImage.offsetWidth;
-            const imageMaxWidth = modalImage.firstElementChild.naturalWidth;
-            if (imageMaxWidth <= imageCurrentWidth + 10) {
-                modalImage.style.cssText = "cursor: auto;"
-                timesClicked = 0;
-            };
-        });
-        
-        // On first click make the image appear at its natural/maximum width and make its container scrollable.
-        // On second click reverse this acton and make the image fit inside the lightbox.
-        modalImage.addEventListener("click", function() {
-            timesClicked++;
-            const imageCurrentWidth = modalImage.offsetWidth;
-            const imageMaxWidth = modalImage.firstElementChild.naturalWidth;
+// On image resize the observer updates the widths which we use to decide if the image can be zoomed in or not. Also calls the cursor update
+const observer = new ResizeObserver(entry => {
+    updateImageWidths();
+    updateCursor();    
+});
 
-            if (timesClicked === 1 && imageMaxWidth > imageCurrentWidth) {
-                modalImage.classList.add("zoom-full-size");
-                modalImage.firstElementChild.classList.remove("fit-window");
-                modalImage.firstElementChild.classList.add("natural-size");
-            } else if (timesClicked === 2) {
-                modalImage.classList.remove("zoom-full-size");
-                modalImage.firstElementChild.classList.remove("natural-size");
-                modalImage.firstElementChild.classList.add("fit-window");
-                timesClicked = 0;
-            };
-            
-        });
-
-        // Funtion to hide the lightbox, change the body overflow as it was before and remove the content of the image container div.
-        function closeLightbox() {
-            modal.style.display = "none";        
-            document.body.style.overflow = "auto";
-            modalImage.removeChild(modalImage.firstChild);
-        };
+// Function to make the lighbox container visible. It creates an image in it with the src and alt of the original/target image which we clicked.
+// This function also starts the resize observer to help the zoom function use the right widths of the image dispalyed.
+function openLightbox (event) {
+    event.preventDefault();
     
-        // Close function is called when Close icon or background area is clicked.
-        modalClose.addEventListener("click", closeLightbox);
-        modalBg.addEventListener("click", closeLightbox);
+    const src = event.target.getAttribute("src");
+    const alt = event.target.getAttribute("alt");
 
-    });
+    createImage(src, alt);
 
-};
+    observer.observe(modalImage);
+
+    imageElement.classList.add("fit-window");
+    document.body.style.overflow = "hidden";
+    modal.style.display = "block";
+}
+
+// The openLightbox function is used on all gallery links/items
+for ( const galleryItem of allGalleryItems ) {
+    galleryItem.addEventListener("click", openLightbox);
+}
+
+// This function hides the lightbox, removes the image element and resize observer(so that they are only used while the lightbox is open)
+function closeLightbox() {
+    modal.style.display = "none";        
+    document.body.style.overflow = "auto";
+    modalImage.removeChild(modalImage.firstChild);
+    observer.unobserve(modalImage);
+}
+
+modalClose.addEventListener("click", closeLightbox);
+modalBg.addEventListener("click", closeLightbox);
 
 
+// Use counter to check how many times the image has been clicked.
+// Then use statements to adjust the zoom/width of the image (which creates zoom in/out feature).
+// On first click the image takes the width from the 'fit-window' css class. On the second click it 
+// takes the width from the 'natural-size' css class (defined in lightbox.css)
+// Here we use the maximum/natural width of the target image and the current width of the image container 
+// to check if the image has been already displayed at its max size. If yes, then the counter is reversed to 0 value to disable zoom in.
+function zoom () {
+
+    timesClicked++;
+
+    if (timesClicked === 1 && imageMaxWidth <= imageCurrentWidth + 10) {
+        timesClicked = 0;
+    } else if (timesClicked === 1 && imageMaxWidth > imageCurrentWidth + 10) {
+        modalImage.classList.add("zoom-full-size");
+        imageElement.classList.remove("fit-window");
+        imageElement.classList.add("natural-size"); 
+    } else if (timesClicked === 2) {
+        modalImage.classList.remove("zoom-full-size");
+        imageElement.classList.remove("natural-size");
+        imageElement.classList.add("fit-window");
+        timesClicked = 0;
+    };
+}
+
+modalImage.addEventListener("click", zoom);
