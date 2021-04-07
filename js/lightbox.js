@@ -82,6 +82,7 @@ function closeLightbox() {
     document.body.style.overflow = "auto";
     modalImage.removeChild(modalImage.firstChild);
     observer.unobserve(modalImage);
+    isZoomed = false;
 }
 
 modalClose.addEventListener("click", closeLightbox);
