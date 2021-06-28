@@ -1,313 +1,545 @@
 <!DOCTYPE html>
 <html id="top" lang="en">
- <head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="css/base.css" type="text/css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/base.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
 
     <title>Atanas Dimitrov - Portfolio</title>
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
-    <meta name="description" content="Web developer based in UK.">
+    <meta name="description" content="Web developer based in UK." />
 
-    <meta property="og:title" content="Atanas Dimitrov Portfolio">
-    <meta property="og:type" content="Portfolio website">
-    <meta property="og:url" content="http://atanas-dim.github.io/">
-    <meta property="og:image" content="http://atanas-dim.github.io/assets/social-card.png">
-    <meta property="og:description" content="Web developer based in UK.">
+    <meta property="og:title" content="Atanas Dimitrov Portfolio" />
+    <meta property="og:type" content="Portfolio website" />
+    <meta property="og:url" content="http://atanas-dim.github.io/" />
+    <meta
+      property="og:image"
+      content="http://atanas-dim.github.io/assets/social-card.png"
+    />
+    <meta property="og:description" content="Web developer based in UK." />
     <meta property="og:site_name" content="Atanas Dimitrov" />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@atanasdim1">
-    <meta name="twitter:title" content="Atanas Dimitrov Portfolio">
-    <meta name="twitter:description" content="Web developer based in UK.">
-    <meta name="twitter:image" content="http://atanas-dim.github.io/assets/social-card.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@atanasdim1" />
+    <meta name="twitter:title" content="Atanas Dimitrov Portfolio" />
+    <meta name="twitter:description" content="Web developer based in UK." />
+    <meta
+      name="twitter:image"
+      content="http://atanas-dim.github.io/assets/social-card.png"
+    />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- NAVIGATION -->
     <header>
-        <!-- HEADER-MAIN ADDED FOR STICKY MOBILE MENU, HEADER WOULD ACT AS WRAPPER TO FIX JUMP ON TOP-->
-        <div class="header-main">
-            <div class="container">
+      <!-- HEADER-MAIN ADDED FOR STICKY MOBILE MENU, HEADER WOULD ACT AS WRAPPER TO FIX JUMP ON TOP-->
+      <div class="header-main">
+        <div class="container">
+          <div class="logo-container">
+            <a href="index.html" aria-label="Website title: Atanas Dimitrov."
+              ><h1 class="logo">ATANAS DIMITROV</h1></a
+            >
+            <a class="hamburger"
+              ><img src="assets/hamburger-icon.svg" alt="Hamburger menu"
+            /></a>
+          </div>
 
-                <div class="logo-container">
-                    <a href="index.html" aria-label="Website title: Atanas Dimitrov."><h1 class="logo">ATANAS DIMITROV</h1></a>
-                    <a class="hamburger"><img src="assets/hamburger-icon.svg" alt="Hamburger menu"></a>
-                </div>
+          <nav>
+            <ul role="presentation">
+              <li>
+                <a
+                  href="index.html#projects"
+                  class="menu-link"
+                  aria-label="Link to Portfolio."
+                  >Portfolio</a
+                >
+              </li>
 
-                <nav>
-                    <ul role="presentation">
-                        <li><a href="index.html#projects" class="menu-link" aria-label="Link to Portfolio.">Portfolio</a></li>
-
-                        <li><a href="index.html#contact-form" class="menu-link" aria-label="Link to Contact form page.">Contact</a></li>
-                    </ul>
-                </nav>
-
-            </div>
+              <li>
+                <a
+                  href="index.html#contact-form"
+                  class="menu-link"
+                  aria-label="Link to Contact form page."
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </header>
 
     <!-- HERO -->
     <main>
+      <section class="hero">
+        <div class="container">
+          <div class="greeting">
+            <h2 id="greeting">Hello!</h2>
+          </div>
 
-        <section class="hero">
+          <div class="intro">
+            <p>
+              I'm Atanas, junior web developer based in UK. I enjoy design and
+              problem solving. The technologies I use include
+              <span>HTML5</span>, <span>CSS3</span>, <span>SASS</span>,
+              <span>JavaScript</span>, <span>React</span>, <span>Redux</span>.
+              See below the work I did while learning to code. Connect via the
+              social links.
+            </p>
 
-            <div class="container">
-
-                <div class="greeting">
-                    <h2 id="greeting" >Hello!</h2>
+            <div class="social">
+              <a
+                href="mailto:hi.atanasdim@gmail.com"
+                aria-label="Atanas's email - Click to copy."
+                target="_blank"
+              >
+                <div class="icon-container">
+                  <img src="assets/mail.svg" alt="" class="icon" />
                 </div>
+              </a>
 
-                <div class="intro">
-                    <p>I'm Atanas, junior web developer based in UK. 
-                        I enjoy design and problem solving.
-                        The technologies I use include <span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <span>React</span>, <span>Redux</span>.
-                        See below the work I did while learning to code. Connect via the social links.</p>
-
-                    <div class="social">       
-                        <a href="mailto:hi.atanasdim@gmail.com" aria-label="Atanas's email - Click to copy." target="_blank">
-                            <div class="icon-container">
-                                <img src="assets/mail.svg" alt="" class="icon">
-                            </div>    
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/atanas-dim/" aria-label="Atanas's LinkedIn profile." target="_blank">
-                            <div class="icon-container">
-                                <img src="assets/linkedin.svg" alt="" class="icon">
-                            </div>    
-                        </a>
-
-                        <a href="https://github.com/atanas-dim" aria-label="Atanas's GitHub profile." target="_blank">
-                            <div class="icon-container">
-                                <img src="assets/github.svg" alt="" class="icon">
-                            </div>    
-                        </a>
-                    </div>
-
+              <a
+                href="https://www.linkedin.com/in/atanas-dim/"
+                aria-label="Atanas's LinkedIn profile."
+                target="_blank"
+              >
+                <div class="icon-container">
+                  <img src="assets/linkedin.svg" alt="" class="icon" />
                 </div>
+              </a>
+
+              <a
+                href="https://github.com/atanas-dim"
+                aria-label="Atanas's GitHub profile."
+                target="_blank"
+              >
+                <div class="icon-container">
+                  <img src="assets/github.svg" alt="" class="icon" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHEVRON -->
+
+      <section>
+        <div class="container">
+          <div class="chevron-down">
+            <h4 role="presentation">See my work</h4>
+            <img src="assets/chevron-down.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2>Portfolio</h2>
+
+          <div class="project-card mapbox reverse-direction">
+            <div
+              class="project-thumb"
+              role="img"
+              aria-label="Searching Mapbox App Thumbnail."
+            >
+              <img
+                src="assets/project-thumb-mapbox-mobile.jpg"
+                alt=""
+                data-parallax="0.035"
+                class="mobile-app-r"
+              />
+              <img
+                src="assets/project-thumb-mapbox.jpg"
+                alt=""
+                data-parallax="-0.035"
+                class="desktop"
+              />
             </div>
 
-        </section>
-
-        <!-- CHEVRON -->
-        
-        <section>
-            <div class="container">
-                <div class="chevron-down">
-                    <h4 role="presentation">See my work</h4>
-                    <img src="assets/chevron-down.svg" alt="">
-                </div>
+            <div class="project-details">
+              <div><h3>Searching Mapbox</h3></div>
+              <h4>React, SASS</h4>
+              <p>
+                The project uses the MapboxGl to search nearby places. Custom
+                features include search bar, theme toggler, collapsible list of
+                nearby places, custom scroll bar.
+              </p>
+              <span
+                ><a
+                  href="https://searching-mapbox.netlify.app/"
+                  target="blank"
+                  class="ext-link"
+                  >Live</a
+                ></span
+              >
+              <span
+                ><a
+                  href="https://github.com/atanas-dim/searching-mapbox"
+                  target="blank"
+                  class="ext-link"
+                  >Code</a
+                ></span
+              >
             </div>
-        </section>
+          </div>
 
-        <!-- PROJECTS -->
-
-   
-        <section id="projects" class="projects">
-
-            <div class="container">
-
-                <h2>Portfolio</h2>
-
-                <div class="project-card reddit">
-
-                    <div class="project-thumb" role="img" aria-label="Reddit Client App Thumbnail.">
-                        <img src="assets/project-thumb-reddit-mobile.jpg" alt="" data-parallax="0.035" class="mobile-app-r">
-                        <img src="assets/project-thumb-reddit.jpg" alt="" data-parallax="-0.035" class="desktop">
-                    </div>
-
-                    <div class="project-details">
-                        <div><h3>Reddit Client</h3></div>
-                        <h4>React, Redux</h4>
-                        <p>Course project using the unofficial JSON Reddit API 
-                            to recreate a simplified read-only version of the platform, 
-                            featuring popular subreddits, filters, posts and comments.</p>  
-                        <span><a href="https://reddit-atanas.netlify.app/" target="blank" class="ext-link" >Live</a></span>
-                        <span><a href="https://github.com/atanas-dim/reddit-client" target="blank" class="ext-link" >Code</a></span>
-                    </div>
-
-                </div>
-               
-                <div class="project-card alba reverse-direction">
-
-                    <div class="project-thumb" role="img" aria-label="Alba Bau + Thumbnail.">
-                        <img src="assets/project-thumb-alba-mobile.jpg" alt="" data-parallax="0.035" class="mobile-app-r">
-                        <img src="assets/project-thumb-alba.jpg" alt="" data-parallax="-0.035" class="desktop">
-                    </div>
-
-                    <div class="project-details">
-                        <div><h3>Alba Bau +</h3></div>
-                        <h4>HTML, SASS, JavaScript</h4>
-                        <p>Side project for a construction firm. I had the chance to apply the 
-                            knowledge on flexbox layouts I've gained so far. Simple one-pager with responsive design.</p> 
-                        <span><a href="https://atanas-dim.github.io/alba-responsive-flexbox" target="blank" class="ext-link" >Live</a></span>
-                        <span><a href="https://github.com/atanas-dim/alba-responsive-flexbox" target="blank" class="ext-link" >Code</a></span>
-                    </div>
-
-                </div>
-
-                <div class="project-card mixed-messages">
-
-                    <div class="project-thumb" role="img" aria-label="Mixed Messages Exercise Thumbnail.">
-                        <img src="assets/project-thumb-mixed-messages.jpg" alt="" data-parallax="0.075" class="desktop">
-                    </div>
-
-                    <div class="project-details">
-                        <h3>Next Life Predictions</h3>
-                        <h4>JavaScript</h4>
-                        <p>A simple JS exercise which returns a randomised prediction every time a user runs the program.</p>
-                        <span><a href="https://codepen.io/atanasdim/pen/XWNJQKJ" target="blank" class="ext-link" >CodePen</a></span>
-                    </div>
-
-                </div>
-
-                <div class="project-card airline reverse-direction">
-    
-                    <div class="project-thumb" role="img" aria-label="Airline App Thumbnail.">
-                        <img src="assets/project-thumb-airline1.jpg" alt="" data-parallax="0.025" class="mobile-app screen-left">
-                        <img src="assets/project-thumb-airline2.jpg" alt="" data-parallax="-0.015" class="mobile-app screen-mid">
-                        <img src="assets/project-thumb-airline3.jpg" alt="" data-parallax="0.075" class="mobile-app screen-right">
-                    </div>
-    
-                    <div class="project-details">
-                        <h3>Airline App</h3>
-                        <h4>UX Design</h4>
-                        <p>The project consists of the work I produced for the UX Design 
-                            Diploma course at UXDI in 2020. It covers the stages of 
-                            UX design from research phase through analysis to creating 
-                            prototypes for usability tests.</p>
-                        <span><a href="airline.html" target="blank" class="int-link" >See project</a></span>
-                    </div>
-
-                </div>
-
-                <div class="project-card mish-mash">
-        
-                    <div class="project-thumb" role="img" aria-label="Mish Mash App Thumbnail.">
-                        <img src="assets/project-thumb-mishmash1.jpg" alt="" data-parallax="-0.055" class="mobile-app screen-left">
-                        <img src="assets/project-thumb-mishmash2.jpg" alt="" data-parallax="0.020" class="mobile-app screen-mid">
-                        <img src="assets/project-thumb-mishmash3.jpg" alt="" data-parallax="-0.015" class="mobile-app screen-right">
-                    </div>
-        
-                    <div class="project-details">
-                        <h3>Mish Mash Groceries</h3>
-                        <h4>UI Design</h4>
-                        <p>Side project which I did to get to know the nature of UI design and mobile apps.
-                            It was entirely self-taught and involved simple user survey, user flow diagrams, 
-                            interactive prototypes and interface design.
-                        </p>
-                        <span><a href="mish-mash.html" target="blank" class="int-link" >See project</a></span>
-                    </div>
-
-                </div>
-
+          <div class="project-card reddit">
+            <div
+              class="project-thumb"
+              role="img"
+              aria-label="Reddit Client App Thumbnail."
+            >
+              <img
+                src="assets/project-thumb-reddit-mobile.jpg"
+                alt=""
+                data-parallax="0.035"
+                class="mobile-app-r"
+              />
+              <img
+                src="assets/project-thumb-reddit.jpg"
+                alt=""
+                data-parallax="-0.035"
+                class="desktop"
+              />
             </div>
 
-        </section>
+            <div class="project-details">
+              <div><h3>Reddit Client</h3></div>
+              <h4>React, Redux</h4>
+              <p>
+                Course project using the unofficial JSON Reddit API to recreate
+                a simplified read-only version of the platform, featuring
+                popular subreddits, filters, posts and comments.
+              </p>
+              <span
+                ><a
+                  href="https://reddit-atanas.netlify.app/"
+                  target="blank"
+                  class="ext-link"
+                  >Live</a
+                ></span
+              >
+              <span
+                ><a
+                  href="https://github.com/atanas-dim/reddit-client"
+                  target="blank"
+                  class="ext-link"
+                  >Code</a
+                ></span
+              >
+            </div>
+          </div>
 
-        <section id="contact-form" class="contact-form">
-
-            <div class="container">
-                
-                <div class="contact-form-card">
-                    <div class="description">
-                        <h2>Contact</h2>
-                        <p>If you're interested in working together or just want to say hi, please use the 
-                            contact form below. I'll try to get back to you within one business day.</p>
-                    </div>
-                    <form action="https://formspree.io/f/mgeprznq" method="POST">
-                        <label for="email">
-                            <h3>Your email:</h3>
-                            <h4>Example: name@domain.com</h4>
-                        </label>
-                        <input id="email" type="email" name="_replyto" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder=" ">
-                        
-                        <label for="subject">
-                            <h3>Subject:</h3>
-                            <h4>What would you like to talk about?</h4>
-                        </label>
-                        <input id="subject" type="text" name="_subject" required placeholder=" " minlength="2" maxlength="50">
-
-                        <label for="msg">
-                            <h3>Your message:</h3>
-                        </label>
-                            <textarea id="msg" type="text" name="message" required>Hi Atanas,</textarea>
-                        
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-                
+          <div class="project-card alba reverse-direction">
+            <div
+              class="project-thumb"
+              role="img"
+              aria-label="Alba Bau + Thumbnail."
+            >
+              <img
+                src="assets/project-thumb-alba-mobile.jpg"
+                alt=""
+                data-parallax="0.035"
+                class="mobile-app-r"
+              />
+              <img
+                src="assets/project-thumb-alba.jpg"
+                alt=""
+                data-parallax="-0.035"
+                class="desktop"
+              />
             </div>
 
-        </section>
+            <div class="project-details">
+              <div><h3>Alba Bau +</h3></div>
+              <h4>HTML, SASS, JavaScript</h4>
+              <p>
+                Side project for a construction firm. I had the chance to apply
+                the knowledge on flexbox layouts I've gained so far. Simple
+                one-pager with responsive design.
+              </p>
+              <span
+                ><a
+                  href="https://atanas-dim.github.io/alba-responsive-flexbox"
+                  target="blank"
+                  class="ext-link"
+                  >Live</a
+                ></span
+              >
+              <span
+                ><a
+                  href="https://github.com/atanas-dim/alba-responsive-flexbox"
+                  target="blank"
+                  class="ext-link"
+                  >Code</a
+                ></span
+              >
+            </div>
+          </div>
 
+          <div class="project-card mixed-messages">
+            <div
+              class="project-thumb"
+              role="img"
+              aria-label="Mixed Messages Exercise Thumbnail."
+            >
+              <img
+                src="assets/project-thumb-mixed-messages.jpg"
+                alt=""
+                data-parallax="0.075"
+                class="desktop"
+              />
+            </div>
+
+            <div class="project-details">
+              <h3>Next Life Predictions</h3>
+              <h4>JavaScript</h4>
+              <p>
+                A simple JS exercise which returns a randomised prediction every
+                time a user runs the program.
+              </p>
+              <span
+                ><a
+                  href="https://codepen.io/atanasdim/pen/XWNJQKJ"
+                  target="blank"
+                  class="ext-link"
+                  >CodePen</a
+                ></span
+              >
+            </div>
+          </div>
+
+          <div class="project-card airline reverse-direction">
+            <div
+              class="project-thumb"
+              role="img"
+              aria-label="Airline App Thumbnail."
+            >
+              <img
+                src="assets/project-thumb-airline1.jpg"
+                alt=""
+                data-parallax="0.025"
+                class="mobile-app screen-left"
+              />
+              <img
+                src="assets/project-thumb-airline2.jpg"
+                alt=""
+                data-parallax="-0.015"
+                class="mobile-app screen-mid"
+              />
+              <img
+                src="assets/project-thumb-airline3.jpg"
+                alt=""
+                data-parallax="0.075"
+                class="mobile-app screen-right"
+              />
+            </div>
+
+            <div class="project-details">
+              <h3>Airline App</h3>
+              <h4>UX Design</h4>
+              <p>
+                The project consists of the work I produced for the UX Design
+                Diploma course at UXDI in 2020. It covers the stages of UX
+                design from research phase through analysis to creating
+                prototypes for usability tests.
+              </p>
+              <span
+                ><a href="airline.html" target="blank" class="int-link"
+                  >See project</a
+                ></span
+              >
+            </div>
+          </div>
+
+          <div class="project-card mish-mash">
+            <div
+              class="project-thumb"
+              role="img"
+              aria-label="Mish Mash App Thumbnail."
+            >
+              <img
+                src="assets/project-thumb-mishmash1.jpg"
+                alt=""
+                data-parallax="-0.055"
+                class="mobile-app screen-left"
+              />
+              <img
+                src="assets/project-thumb-mishmash2.jpg"
+                alt=""
+                data-parallax="0.020"
+                class="mobile-app screen-mid"
+              />
+              <img
+                src="assets/project-thumb-mishmash3.jpg"
+                alt=""
+                data-parallax="-0.015"
+                class="mobile-app screen-right"
+              />
+            </div>
+
+            <div class="project-details">
+              <h3>Mish Mash Groceries</h3>
+              <h4>UI Design</h4>
+              <p>
+                Side project which I did to get to know the nature of UI design
+                and mobile apps. It was entirely self-taught and involved simple
+                user survey, user flow diagrams, interactive prototypes and
+                interface design.
+              </p>
+              <span
+                ><a href="mish-mash.html" target="blank" class="int-link"
+                  >See project</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-form" class="contact-form">
+        <div class="container">
+          <div class="contact-form-card">
+            <div class="description">
+              <h2>Contact</h2>
+              <p>
+                If you're interested in working together or just want to say hi,
+                please use the contact form below. I'll try to get back to you
+                within one business day.
+              </p>
+            </div>
+            <form action="https://formspree.io/f/mgeprznq" method="POST">
+              <label for="email">
+                <h3>Your email:</h3>
+                <h4>Example: name@domain.com</h4>
+              </label>
+              <input
+                id="email"
+                type="email"
+                name="_replyto"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                placeholder=" "
+              />
+
+              <label for="subject">
+                <h3>Subject:</h3>
+                <h4>What would you like to talk about?</h4>
+              </label>
+              <input
+                id="subject"
+                type="text"
+                name="_subject"
+                required
+                placeholder=" "
+                minlength="2"
+                maxlength="50"
+              />
+
+              <label for="msg">
+                <h3>Your message:</h3>
+              </label>
+              <textarea id="msg" type="text" name="message" required>
+Hi Atanas,</textarea
+              >
+
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <!-- <img src="assets/photo-atanas.jpg" class="profile-photo"> -->
-            <h4>Let's connect!</h4>
+      <div class="container">
+        <!-- <img src="assets/photo-atanas.jpg" class="profile-photo"> -->
+        <h4>Let's connect!</h4>
 
-            <div class="social">       
-                <a href="mailto:hi.atanasdim@gmail.com" aria-label="Atanas's email - Click to copy." target="_blank">
-                    <div class="icon-container">
-                        <img src="assets/mail.svg" alt="" class="icon">
-                    </div>    
-                </a>
-
-                <a href="https://www.linkedin.com/in/atanas-dim/" aria-label="Atanas's LinkedIn profile." target="_blank">
-                    <div class="icon-container">
-                        <img src="assets/linkedin.svg" alt="" class="icon">
-                    </div>    
-                </a>
-
-                <a href="https://github.com/atanas-dim" aria-label="Atanas's GitHub profile." target="_blank">
-                    <div class="icon-container">
-                        <img src="assets/github.svg" alt="" class="icon">
-                    </div>    
-                </a>
+        <div class="social">
+          <a
+            href="mailto:hi.atanasdim@gmail.com"
+            aria-label="Atanas's email - Click to copy."
+            target="_blank"
+          >
+            <div class="icon-container">
+              <img src="assets/mail.svg" alt="" class="icon" />
             </div>
+          </a>
 
-
-            <hr>
-
-
-            <div class="footer-info">
-
-                <div class="project-list">
-                    Projects
-                    <div><a href="https://reddit-atanas.netlify.app" target="blank">/ Reddit Client</a></div>
-                    <div><a href="https://atanas-dim.github.io/alba-responsive-flexbox" target="blank">/ Alba Bau +</a></div>
-                    <div><a href="mixed-messages.html">/ Next Life Predictions</a></div>
-                    <div><a href="airline.html">/ Airline App</a></div>
-                    <div><a href="mish-mash.html">/ Mish Mash Groceries</a></div>
-                </div>
-
-                <div class="credits">
-                    Designed and developed by Atanas Dimitrov &copy; 2021
-                </div>
-
+          <a
+            href="https://www.linkedin.com/in/atanas-dim/"
+            aria-label="Atanas's LinkedIn profile."
+            target="_blank"
+          >
+            <div class="icon-container">
+              <img src="assets/linkedin.svg" alt="" class="icon" />
             </div>
+          </a>
 
+          <a
+            href="https://github.com/atanas-dim"
+            aria-label="Atanas's GitHub profile."
+            target="_blank"
+          >
+            <div class="icon-container">
+              <img src="assets/github.svg" alt="" class="icon" />
+            </div>
+          </a>
         </div>
+
+        <hr />
+
+        <div class="footer-info">
+          <div class="project-list">
+            Projects
+            <div>
+              <a href="https://searching-mapbox.netlify.app" target="blank"
+                >/ Searching Mapbox</a
+              >
+            </div>
+            <div>
+              <a href="https://reddit-atanas.netlify.app" target="blank"
+                >/ Reddit Client</a
+              >
+            </div>
+            <div>
+              <a
+                href="https://atanas-dim.github.io/alba-responsive-flexbox"
+                target="blank"
+                >/ Alba Bau +</a
+              >
+            </div>
+            <div><a href="mixed-messages.html">/ Next Life Predictions</a></div>
+            <div><a href="airline.html">/ Airline App</a></div>
+            <div><a href="mish-mash.html">/ Mish Mash Groceries</a></div>
+          </div>
+
+          <div class="credits">
+            Designed and developed by Atanas Dimitrov &copy; 2021
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- SCRIPTS -->
-    
+
     <script src="js/menu.js"></script>
     <script src="js/greeting.js"></script>
-    <script src="js/parallax.js" id="parallax-script"></script>    
+    <script src="js/parallax.js" id="parallax-script"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/copyemail.js"></script>
-
-</body>
+  </body>
 </html>
