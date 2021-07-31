@@ -679,9 +679,6 @@ a.anchor-link:after {
 }
 
 /* COPY EMAIL TO CLIPBOARD */
-/* .email-link {
-  position: relative;
-} */
 
 .email-alert {
   opacity: 0;
@@ -694,16 +691,16 @@ a.anchor-link:after {
   padding: 0 10px;
   position: absolute;
   top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: -18px;
   white-space: nowrap;
   z-index: 999;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 320px) {
   .email-alert {
-    left: 0%;
-    transform: translateX(0%);
+    font-size: 0.5rem;
+    top: -25px;
+    left: -13px;
   }
 }
 
