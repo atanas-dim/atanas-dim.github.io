@@ -104,6 +104,7 @@ a.anchor-link {
   align-items: center;
   transition: all 0.3s ease-in-out;
   z-index: 0;
+  margin-bottom: 5px;
 }
 
 a.ext-link:before {
@@ -143,13 +144,13 @@ a.int-link:after {
 header {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   width: 100%;
   height: 60px;
   background-color: #1a1a1a;
   overflow: hidden;
   /* TRANSPORM Y -1 FOR MOBILE MENU */
-  transform: translate(-50%, -1px);
+  transform: translateY(-1px);
   transition: all 0.4s ease-in-out;
   z-index: 999;
 }
@@ -167,7 +168,7 @@ header {
 }
 
 .hidden {
-  transform: translate(-50%, -200%);
+  transform: translateY(-200%);
 }
 
 .header-main {
@@ -264,12 +265,23 @@ header nav .selected {
 
 .greeting {
   width: 36%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .greeting h2 {
   color: #43b0df;
-  padding-bottom: 10px;
   margin-bottom: 0;
+}
+
+.profile-photo {
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
 }
 
 .intro {
@@ -732,10 +744,10 @@ a.anchor-link:after {
   }
 
   .hero .container {
-    padding-top: 0;
+    padding: 80px 0;
     justify-content: center;
     flex-direction: column;
-    min-height: 520px;
+    /* min-height: 520px; */
   }
 
   .hero .container,
@@ -750,6 +762,10 @@ a.anchor-link:after {
   .greeting,
   .intro {
     width: 100%;
+  }
+
+  .greeting {
+    justify-content: flex-start;
   }
 
   .intro p,
@@ -898,10 +914,19 @@ a.anchor-link:after {
   }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 375px) {
   h2,
   .greeting h2 {
     font-size: 1.6rem;
+  }
+
+  .greeting {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    margin-bottom: 20px;
   }
 }
 
