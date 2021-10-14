@@ -278,6 +278,8 @@ header nav .selected {
 }
 
 .profile-photo {
+  border: solid 2px #43b0df;
+  padding: 2px;
   border-radius: 100%;
   width: 80px;
   height: 80px;
@@ -396,7 +398,7 @@ header nav .selected {
 .project-cover img {
   transition: filter ease-in-out 0.3s;
   box-shadow: 0 0 10px #1a1a1a54;
-  border: solid 1px #aaaaaa;
+  border: solid 1px #383838;
   border-radius: 20px;
 }
 

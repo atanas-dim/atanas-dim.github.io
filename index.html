@@ -149,12 +149,58 @@
         <div class="container">
           <h2>Portfolio</h2>
 
-          <div class="project-card mixed-messages">
+          <div class="project-card lucs reverse-direction">
+            <div
+              class="project-thumb"
+              role="img"
+              aria-label="LUCS Audio Tours App Thumbnail."
+            >
+              <img
+                src="assets/project-thumb-lucs-mobile.jpg"
+                alt=""
+                data-parallax="0.035"
+                class="mobile-app-r"
+              />
+              <img
+                src="assets/project-thumb-lucs.jpg"
+                alt=""
+                data-parallax="-0.035"
+                class="desktop"
+              />
+            </div>
+
+            <div class="project-details">
+              <h3>LUCS Audio Tours - wip</h3>
+              <h4>NextJS, TypeScript, TailwindCSS</h4>
+              <h4>Team project</h4>
+              <p>
+                Mobile-first web app for a charity. Features internationalized
+                routing with next-i18next package and light/dark themes with
+                TailwindCSS. Using Sanity Studio for content management.
+              </p>
+              <span
+                ><a
+                  href="https://lucs-pwa.vercel.app/"
+                  target="blank"
+                  class="ext-link"
+                  >Dev Preview</a
+                ></span
+              >
+            </div>
+          </div>
+
+          <div class="project-card beach-shop">
             <div
               class="project-thumb"
               role="img"
               aria-label="BeachShop Thumbnail."
             >
+              <img
+                src="assets/project-thumb-beachshop-mobile.jpg"
+                alt=""
+                data-parallax="0.035"
+                class="mobile-app-r"
+              />
               <img
                 src="assets/project-thumb-beachshop.jpg"
                 alt=""
@@ -218,7 +264,7 @@
             </div>
 
             <div class="project-details">
-              <div><h3>Reddit Client</h3></div>
+              <h3>Reddit Client</h3>
               <h4>React, Redux</h4>
               <p>
                 Course project using the unofficial JSON Reddit API to recreate
@@ -265,7 +311,7 @@
             </div>
 
             <div class="project-details">
-              <div><h3>Searching Mapbox</h3></div>
+              <h3>Searching Mapbox</h3>
               <h4>React, SCSS</h4>
               <p>
                 The project uses the MapboxGl to search nearby places. Custom
@@ -312,7 +358,7 @@
             </div>
 
             <div class="project-details">
-              <div><h3>Alba Bau +</h3></div>
+              <h3>Alba Bau +</h3>
               <h4>HTML, SCSS, JavaScript</h4>
               <p>
                 Side project for a construction firm. Working with flexbox
@@ -517,6 +563,11 @@ Hi Atanas,</textarea
         <div class="footer-info">
           <div class="project-list">
             Projects
+            <div>
+              <a href="https://lucs-pwa.vercel.app/" target="blank"
+                >/ LUCS Audio Tours</a
+              >
+            </div>
             <div>
               <a href="https://beachshop.netlify.app" target="blank"
                 >/ BeachShop</a
