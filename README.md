@@ -33,7 +33,7 @@ SuperHi and Codecademy
 
 ## See live
 
-[www.atanasdim.com](https://www.atanasdim.com/)
+[https://atanas.codes/](https://atanas.codes/)
 
 ## Contact
 
